@@ -37,8 +37,6 @@ int main() {
     wav.readFile("yes-8-bit-stereo.wav");
     IProcessor *processor = new Normalize(); 
     processor->processBuffer(wav.getBuffer(), wav.getBufferSize());
-    
-
 
     std::cout << "Hello, World!" << std::endl;
     return 0;
