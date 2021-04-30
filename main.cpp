@@ -1,6 +1,9 @@
 /** @file */
 #include <iostream>
 
+#include "Wav.h"
+
+
 /**
  * \brief   The function bar.
  *
@@ -26,6 +29,12 @@ void fn(){
 }
 
 int main() {
+
+    Wav wav;
+    wav.readFile("yes-16-bit-mono.wav");
+    wav.readFile("yes-26-bit-stereo.wav");
+    wav.readFile("yes-8-bit-stereo.wav");
+    
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }
