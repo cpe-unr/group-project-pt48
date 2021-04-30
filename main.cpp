@@ -2,7 +2,8 @@
 #include <iostream>
 
 #include "Wav.h"
-
+#include "processor.h"
+#include "normalization.h"
 
 /**
  * \brief   The function bar.
@@ -31,10 +32,14 @@ void fn(){
 int main() {
 
     Wav wav;
-    wav.readFile("yes-16-bit-mono.wav");
-    wav.readFile("yes-26-bit-stereo.wav");
+    //wav.readFile("yes-16-bit-mono.wav");
+    //wav.readFile("yes-26-bit-stereo.wav");
     wav.readFile("yes-8-bit-stereo.wav");
+    IProcessor *processor = new Normalize(); 
+    processor->processBuffer(wav.getBuffer(), wav.getBufferSize());
     
+
+
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }

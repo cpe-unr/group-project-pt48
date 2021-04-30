@@ -4,6 +4,3 @@
 
 #include "processor.h"
 
-void Processor::process(){
-    
-}

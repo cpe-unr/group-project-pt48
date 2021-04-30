@@ -10,7 +10,7 @@
 class Processor : public IProcessor{
 
     public:
-    void process() override;
+    void processBuffer(int* buffer, int bufferSize) override;
 
 };
 

@@ -11,7 +11,7 @@ void Wav::readFile(const std::string &fileName) {
         buffer = new int[waveHeader.data_bytes];
         file.read(reinterpret_cast<char *>(buffer), waveHeader.data_bytes);
         file.close();
-        //std::cout << waveHeader.bit_depth << std::endl;
+        std::cout << waveHeader.bit_depth << std::endl;
     }
 }
 

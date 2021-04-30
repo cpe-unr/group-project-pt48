@@ -23,6 +23,12 @@ typedef struct wav_header{
     char data_header[4];
     int data_bytes;
 
+    char list_header[4];
+    int list_chunk;
+    // char info_header[4];
+    // char sub_data[4];
+    // int sub_chunk;
+    
 }wav_header;
 
 #endif
