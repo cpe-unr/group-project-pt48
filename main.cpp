@@ -38,6 +38,8 @@ int main() {
     IProcessor *processor = new Normalize(); 
     processor->processBuffer(wav.getBuffer(), wav.getBufferSize());
 
+    wav.readMeta("yes-8-bit-stereo.wav");
+
     std::cout << "Hello, World!" << std::endl;
     return 0;
 }

@@ -4,3 +4,6 @@
 
 #include "datawriter.h"
 
+void DataWriter::writeData(){
+    
+}

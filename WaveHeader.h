@@ -25,10 +25,15 @@ typedef struct wav_header{
 
     char list_header[4];
     int list_chunk;
-    // char info_header[4];
-    // char sub_data[4];
-    // int sub_chunk;
+
     
 }wav_header;
+
+struct meta_data{
+
+    char sub_data[4];
+    int sub_data_size; 
+
+};
 
 #endif
