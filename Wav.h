@@ -18,6 +18,7 @@ class MetaData : public meta_data{
     unsigned char* buffer3;
 
     public:
+    unsigned char* getMeta();
     int* buffero;
     //meta_data metadata;
     std::string datastring; 

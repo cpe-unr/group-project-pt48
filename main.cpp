@@ -34,11 +34,11 @@ int main() {
     Wav wav;
     //wav.readFile("yes-16-bit-mono.wav");
     //wav.readFile("yes-26-bit-stereo.wav");
-    wav.readFile("yes-8-bit-stereo.wav");
+    wav.readFile("yes-8bit-mono.wav");
     IProcessor *processor = new Normalize(); 
     processor->processBuffer(wav.getBuffer(), wav.getBufferSize());
 
-    wav.readMeta("yes-8-bit-stereo.wav");
+    //wav.readMeta("yes-8-bit-stereo.wav");
 
     std::cout << "Hello, World!" << std::endl;
     return 0;
