@@ -13,17 +13,18 @@
 
 class MetaData : public meta_data{
     meta_data metaData;
-    wav_header waveHeader;
+    //wav_header waveHeader;
     
-    unsigned char* buffer3;
+    
 
     public:
-    unsigned char* getMeta();
+    unsigned char* buffer3;
+    //unsigned char* getMeta();
     int* buffero;
     //meta_data metadata;
-    std::string datastring; 
-    void readMeta(const std::string &fileName );
-    bool metaExist(const meta_data &fileName, char, char, char, char);
+    //std::string datastring; 
+    //void readMeta(const std::string &fileName);
+    bool metaExist(const meta_data &fileName);
 
 };
 
