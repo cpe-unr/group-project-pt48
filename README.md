@@ -4,10 +4,6 @@
 
 Group Members: Alex Mondroski 
                Kaitlin White
-             
-Member Responsibilities: Alex -library implementation, Documentation - doxygen, diagram, Csv writer, Makefile, echo 
-                         Kaitlin - 
-
 
 Diagram
 
