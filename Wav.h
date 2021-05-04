@@ -11,6 +11,11 @@
 #include <iostream>
 #include <vector>
 
+/**
+ * Class to interpret Metadata
+*/
+
+
 class MetaData : public meta_data{
     meta_data metaData;
     //wav_header waveHeader;

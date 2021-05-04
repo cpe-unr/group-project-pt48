@@ -7,9 +7,9 @@
 
 typedef struct wav_header{
 
-    char riff_header[4];
-    int wave_size;
-    char wave_header[4];
+    char riff_header[4]; 
+    int wave_size; 
+    char wave_header[4]; 
 
     char fmt_header[4];
     int fmt_chunk_size;
@@ -37,8 +37,8 @@ struct meta_data{
     char info_header[4];
     char sub_data[4];
     int sub_data_size; 
-    
-    
+
+
 };
 
 #endif
