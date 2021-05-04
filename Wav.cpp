@@ -104,8 +104,8 @@ MetaManager::MetaManager(const std::string &fileName){
 }
 
 void MetaManager::printMeta(){
-    for(int i =0; i < sizeof(metadata); i++){
-        std::cout << metadata.at(i) << std::endl;
+    for(int i =0; i < metaInfo.list_chunk; i++){
+        std::cout << metadata[i] << std::endl;
     }
 }
 

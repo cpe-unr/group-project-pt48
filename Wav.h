@@ -16,10 +16,11 @@
  * @brief MetaData class - retrieves metadata
  * 
  */
-class MetaData{
+class MetaData : public meta_data{
     int size;
     char taginfo[4];
     std::string datastring; 
+    meta_data meta;
     
     public:
     /**
