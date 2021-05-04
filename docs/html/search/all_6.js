@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['processor',['Processor',['../db/d9f/classProcessor.html',1,'']]]
+  ['noisegate_10',['NoiseGate',['../d3/d32/classNoiseGate.html',1,'']]],
+  ['normalize_11',['Normalize',['../db/dc5/classNormalize.html',1,'']]]
 ];

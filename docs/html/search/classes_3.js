@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['meta_5fdata',['meta_data',['../d1/dd1/structmeta__data.html',1,'']]],
-  ['metadata',['MetaData',['../de/d44/classMetaData.html',1,'']]]
+  ['iprocessor_19',['IProcessor',['../d5/d21/classIProcessor.html',1,'']]]
 ];
