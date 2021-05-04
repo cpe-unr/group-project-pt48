@@ -29,14 +29,7 @@ struct meta_data{
     char list_header[4];
     int list_chunk;
     char info_header[4];
-<<<<<<< HEAD
     
-=======
-    char sub_data[4];
-    int sub_data_size; 
-
-
->>>>>>> a5073a72968c2d579995224a10d095642f4afa08
 };
 
 #endif
