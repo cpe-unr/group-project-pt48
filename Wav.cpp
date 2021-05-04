@@ -69,10 +69,8 @@ void Wav::writeFile(const std::string &outFileName){
     outFile.write((char*)&size, sizeof(size));
 
     outFile.write("INFO", 4);
-    for(wav_header i : metaDataV){
-        outFile.write((char*)&i, sizeof(waveHeader.data_bytes));
-        outFile.write((char*)&buffer, sizeof(i.data_bytes));
-    }
+    MetaManager meta;
+    meta.printMeta();
 
     outFile.write("DATA", 4);
     outFile.write((char*)&buffersize, sizeof(buffersize));
