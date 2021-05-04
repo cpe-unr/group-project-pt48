@@ -12,10 +12,22 @@
 #include <iostream>
 #include <vector>
 
+<<<<<<< HEAD
 class MetaData{
     int size;
     char taginfo[4];
     std::string datastring; 
+=======
+/**
+ * Class to interpret Metadata
+*/
+
+
+class MetaData : public meta_data{
+    meta_data metaData;
+    //wav_header waveHeader;
+    
+>>>>>>> a5073a72968c2d579995224a10d095642f4afa08
     
     public:
     MetaData() = default;
