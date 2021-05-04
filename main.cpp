@@ -39,7 +39,13 @@ void fn(){
 using namespace std;
 const int NUM_ARGS = 2;
 
-
+/**
+ * @brief Main Function 
+ * 
+ * @param argc - executable input parameter
+ * @param argv - filename input parameter
+ * @return int - returns 0
+ */
 int main(int argc, char const* argv[]) {
     Wav wav;
     CSVWriter csv;
