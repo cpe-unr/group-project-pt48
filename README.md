@@ -5,19 +5,19 @@
 Group Members: Alex Mondroski 
                Kaitlin White
              
-Member Responsibilities: Alex -library implementation, Documentation - doxygen, diagram, Csv writer, Makefile 
-
+Member Responsibilities: Alex -library implementation, Documentation - doxygen, diagram, Csv writer, Makefile, echo 
+                         Kaitlin - 
 
 
 Diagram
 
-<div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embeddedchart/122e7022-4935-4dc5-a300-1d77dfe64f36" id="6lDzuCOsDMc5"></iframe></div>
+[UML class.pdf](https://github.com/cpe-unr/group-project-pt48/files/6424232/UML.class.pdf)
 
 Design: 
 
+Our design followed the prompt, in that we tried our best to create a system that handled the tasks given for the project. Implementing the areas of concern, including user interacting, wav processing, and File I/o all posed their own challenges. We made sure that code handling one aspect did not have any code relating to another area of concern, which helped modulate the processs. 
 
-Our design directly followed the prompt, in that we tried our best to create a system that  
-
+Challenges: In my opinion the biggest challenge for our group was communication and lack of planning. We planned to divide and delegate the work for 3 group members, however we could not get in contact with the third member for many days, which wasted a lot of time. It was also a challenge to plan and organize the project,  Were it not for disorganization, I believe we could have created a functioning and useful program, and I am disappointed that we were not able to do so. 
 
 
 
