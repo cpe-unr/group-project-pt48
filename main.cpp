@@ -4,6 +4,13 @@
 #include "Wav.h"
 #include "processor.h"
 #include "normalization.h"
+#include "echo.h"
+#include "noisegate.h"
+#include "CSVwriter.h"
+
+#include<iostream>
+#include<string>
+
 
 /**
  * \brief   The function bar.
@@ -29,17 +36,117 @@ void fn(){
 
 }
 
-int main() {
+using namespace std;
+const int NUM_ARGS = 2;
 
+
+int main(int argc, char const* argv[]) {
     Wav wav;
-    //wav.readFile("yes-16-bit-mono.wav");
-    //wav.readFile("yes-26-bit-stereo.wav");
-    wav.readFile("yes-8bit-mono.wav");
-    IProcessor *processor = new Normalize(); 
-    processor->processBuffer(wav.getBuffer(), wav.getBufferSize());
+    CSVWriter csv;
+    //Echo echo;
+    if(argc < NUM_ARGS){
+        cout << "Correct usage:" << endl;
+        cout << argv[0] << " filename" << endl;
+        return 0;
+    }
+    string file = argv[1];
+    ifstream inputFile; 
+    inputFile.open(file); 
+    if(!inputFile.good()){
+        cout << "The file " << file << " could not be opened." << endl;
+    } 
 
-    // std::cout << "test" << std::endl;
-    // wav.readMeta("yes-8-bit-stereo.wav");
+    int num;
+    cout << "What would you like to do? please enter a number" << endl;
+    cout << "1 echo" << endl;
+    cout << "2 noisegate" << endl;
+    cout << "3 normalize" << endl;
+    cin >> num; 
+
+    if(num == 1){
+        wav.readFile(file);
+        if(wav.getNumChannels() == 1){
+            IProcessor *processor = new Echo(5000);
+            processor->processBuffer(wav.getBuffer(), wav.getBufferSize());
+            cout << "Please name your new file as: filename.csv" << endl;
+            string filename; 
+            cin >> filename; 
+            if(filename != file){
+                csv.writeCSV(filename);
+            }else{
+                cout << "That file name is already taken. Please choose a new one" << endl;
+            }
+        }else if(wav.getNumChannels()==2){
+            IProcessor *processor = new Echo(5000);
+            processor->processBufferStereo(wav.getBuffer(), wav.getBuffer(), wav.getNumChannels(), wav.getNumChannels());
+            cout << "Please name your new file as: filename.csv" << endl;
+            string filename; 
+            cin >> filename;
+            if(filename != file){
+                csv.writeCSV(filename);
+            }else{
+                cout << "That file name is already taken. Please choose a new one" << endl;
+            }
+        }else{
+            return 0;
+        }
+    } else if(num == 2){
+        wav.readFile(file);
+        if(wav.getNumChannels() == 1){
+            IProcessor *processor = new Normalize(500);
+            processor->processBuffer(wav.getBuffer(), wav.getBufferSize());
+            cout << "Please name your new file as: filename.csv" << endl;
+            string filename; 
+            cin >> filename;
+            if(filename != file){
+                csv.writeCSV(filename);
+            }else{
+                cout << "That file name is already taken. Please choose a new one" << endl;
+            }
+        }else if(wav.getNumChannels() == 2){
+            IProcessor *processor = new Normalize(500);
+            processor->processBufferStereo(wav.getBuffer(), wav.getBuffer(), wav.getBufferSize(), wav.getBufferSize());
+            cout << "Please name your new file as: filename.csv" << endl;
+            string filename;
+            cin >> filename;
+            if(filename != file){
+                csv.writeCSV(filename);
+            }else{
+                cout << "That file name is already taken. Please choose a new one" << endl;
+            }
+        }else{
+            return 0;
+        }
+    }else if(num == 3){
+        wav.readFile(file);
+        if(wav.getNumChannels() == 1){
+            IProcessor *processor = new NoiseGate(10);
+            processor->processBuffer(wav.getBuffer(), wav.getBufferSize());
+            cout << "Please name your new file as: filename.csv" << endl;
+            string filename;
+            cin >> filename;
+            if(filename != file){
+                csv.writeCSV(filename);
+            }else{
+                cout << "that file name is already taken. Please choose a new one" << endl;
+            }
+        }else if(wav.getNumChannels() == 2){
+            IProcessor *processor = new NoiseGate(10);
+            processor->processBufferStereo(wav.getBuffer(), wav.getBuffer(), wav.getBufferSize(), wav.getBufferSize());
+            cout << "Please name your new file as: filename.csv" << endl;
+            string filename;
+            cin >> filename;
+            if(filename != file){
+                csv.writeCSV(filename);
+            }else{
+                cout << "That file name is already taken. Please choose a new one" << endl;
+            }
+        }else{
+            return 0;
+        }
+    }else{
+        cout << "Please enter a valid number" << endl;
+    }
 
     std::cout << "Hello, World!" << std::endl;
     return 0;

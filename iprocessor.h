@@ -9,8 +9,10 @@
 #include <cmath>
 
 class IProcessor{
+    
     public:
-    virtual void processBuffer(int* buffer, int bufferSize) = 0;
+    virtual void processBuffer(unsigned char* buffer, int bufferSize) = 0;
+    virtual void processBufferStereo(unsigned char*, unsigned char*, int, int) = 0;
 };
 
 #endif

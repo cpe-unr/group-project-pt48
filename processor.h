@@ -10,7 +10,8 @@
 class Processor : public IProcessor{
 
     public:
-    void processBuffer(int* buffer, int bufferSize) override;
+    void processBuffer(unsigned char* buffer, int bufferSize) override;
+    void processBufferStereo(unsigned char*, unsigned char*, int, int) override;
 
 };
 

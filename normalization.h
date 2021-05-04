@@ -15,10 +15,15 @@
 
 class Normalize : public IProcessor{
 
-    public:
-    void NormWav(int*, int);
-    void processBuffer(int* buffer, int bufferSize) override;
+    int wavNum, newNum;
 
+    public:
+    Normalize();
+    Normalize(int);
+    void NormWav(unsigned char*, int);
+    void NormWavStereo(unsigned char*, unsigned char*, int, int);
+    void processBuffer(unsigned char* buffer, int bufferSize) override;
+    void processBufferStereo(unsigned char* buffer1, unsigned char* buffer2, int buffers1, int buffers2) override;
 };
 
 

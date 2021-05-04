@@ -6,47 +6,59 @@
 #define WAVEMANAGER_H
 
 #include "WaveHeader.h"
+
 #include <string>
 #include <fstream>
 #include <iostream>
 #include <vector>
 
-class MetaData : public meta_data{
-    meta_data metaData;
-    //wav_header waveHeader;
+class MetaData{
+    int size;
+    char taginfo[4];
+    std::string datastring; 
     
-    
-
     public:
-    unsigned char* buffer3;
-    //unsigned char* getMeta();
-    int* buffero;
-    //meta_data metadata;
-    //std::string datastring; 
-    //void readMeta(const std::string &fileName);
-    bool metaExist(const meta_data &fileName);
+    MetaData() = default;
+    MetaData(std::ifstream &fileName);
+    std::string getTag() const;
+    void setTag(char) const;
+    int getSize() const;
+    void setSize(int);
+    std::string getDataS() const;
+    void setDataS(std::string);
 
 };
 
-class Wav : public MetaData{
+class Wav{
 
     private:
-    int* buffer = NULL;
-    unsigned char* buffer2; 
+    int buffersize, bitdepth, numChannels;
+    unsigned char* buffer = NULL; 
+    std::vector<wav_header> metaDataV;
     wav_header waveHeader;
-    meta_data metaData;
 
     public:
-    unsigned char* buffer3;
     void readFile(const std::string &fileName);
     void writeFile(const std::string &outFileName);
-    virtual ~Wav();
-    int *getBuffer();
+    ~Wav();
+    unsigned char *getBuffer();
     int getBufferSize() const;
+    int getNumChannels();
 
 };
 
+class MetaManager{
+
+    meta_data metaInfo;
+    std::vector<MetaData> metadata; 
+
+    public:
+    MetaManager() = default;
+    MetaManager(std::ifstream &fileName);
+    void printMeta();
+    int getSize() const;
 
 
+};
 
 #endif
