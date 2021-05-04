@@ -44,12 +44,9 @@ void Wav::readFile(const std::string &fileName){
         buffer = new unsigned char[waveHeader.data_bytes];
         file.read(reinterpret_cast<char *>(buffer), waveHeader.data_bytes);
 
-        int wavSize = waveHeader.bit_depth / 8;
-        int numSamples = waveHeader.fmt_chunk_size * 8 / waveHeader.bit_depth;
-        buffersize = waveHeader.fmt_chunk_size;
-        buffer = new unsigned char[numSamples];
-        for(int i =0; i < numSamples; i++){
-            file.read((char*)&buffer[i], wavSize);
+        buffer = new unsigned char[waveHeader.fmt_chunk_size];
+        for(int i =0; i < waveHeader.fmt_chunk_size; i++){
+            file.read((char*)&buffer[i], waveHeader.fmt_chunk_size);
         }
     }
     file.close();
@@ -72,9 +69,9 @@ void Wav::writeFile(const std::string &outFileName){
     outFile.write((char*)&size, sizeof(size));
 
     outFile.write("INFO", 4);
-    for(wav_header s : metaDataV){
-        outFile.write((char*)&s, sizeof(waveHeader.data_bytes));
-        outFile.write((char*)&buffer, sizeof(s.data_bytes));
+    for(wav_header i : metaDataV){
+        outFile.write((char*)&i, sizeof(waveHeader.data_bytes));
+        outFile.write((char*)&buffer, sizeof(i.data_bytes));
     }
 
     outFile.write("DATA", 4);
@@ -102,18 +99,18 @@ Wav::~Wav(){
     }
 }
 
-MetaManager::MetaManager(std::ifstream &file){
+MetaManager::MetaManager(const std::string &fileName){
+    std::ifstream file(fileName,std::ios::binary | std::ios::in);
     file.read((char*)&metaInfo, sizeof(meta_data));
-    int i = 0, count = 0;
-    while(i < metaInfo.list_chunk){
-        metadata.emplace_back(file);
-        i += metadata[count++].getSize();
+    unsigned char* buffertemp = new unsigned char[metaInfo.list_chunk];
+    while(file.read((char*)&metaInfo, sizeof(meta_data) == 1)){
+        metadata.push_back(buffertemp);
     }
 }
 
 void MetaManager::printMeta(){
-    for(MetaData& metaD : metadata){
-        std::cout << metaD.getTag() << '\n' << metaD.getSize() << '\n' << metaD.getDataS() << std::endl;
+    for(int i =0; i < sizeof(metadata); i++){
+        std::cout << metadata.at(i) << std::endl;
     }
 }
 

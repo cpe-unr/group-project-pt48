@@ -1,5 +1,5 @@
-//authors: 
-//date: 
+//authors: pt48
+//date: final 5/4/21
 //semester final project
 
 #ifndef WAVEMANAGER_H
@@ -29,7 +29,7 @@ class MetaData{
     MetaData() = default;
 
     /**
-     * @brief Parameterized onstructer for a new Meta Data object
+     * @brief Parameterized constructer for a new Meta Data object
      * 
      * @param fileName 
      */
@@ -139,7 +139,7 @@ class Wav{
 class MetaManager{
 
     meta_data metaInfo;
-    std::vector<MetaData> metadata; 
+    std::vector<unsigned char*> metadata; 
 
     public:
     /**
@@ -153,7 +153,7 @@ class MetaManager{
      * 
      * @param fileName 
      */
-    MetaManager(std::ifstream &fileName);
+    MetaManager(const std::string &fileName);
 
     /**
      * @brief prints out metadata
