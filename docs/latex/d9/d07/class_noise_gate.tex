@@ -1,0 +1,124 @@
+\hypertarget{class_noise_gate}{}\doxysection{Noise\+Gate Class Reference}
+\label{class_noise_gate}\index{NoiseGate@{NoiseGate}}
+
+
+\mbox{\hyperlink{class_noise_gate}{Noise\+Gate}} class -\/ inherits from \mbox{\hyperlink{class_i_processor}{IProcessor}}.  
+
+
+
+
+{\ttfamily \#include $<$noisegate.\+h$>$}
+
+Inheritance diagram for Noise\+Gate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d9/d07/class_noise_gate}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_noise_gate_ae9ccbe5934108f756ada0e492db5f71e}\label{class_noise_gate_ae9ccbe5934108f756ada0e492db5f71e}} 
+\mbox{\hyperlink{class_noise_gate_ae9ccbe5934108f756ada0e492db5f71e}{Noise\+Gate}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Noise Gate object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_noise_gate_a1c0e6e6c834663236ceca91522c891a4}\label{class_noise_gate_a1c0e6e6c834663236ceca91522c891a4}} 
+\mbox{\hyperlink{class_noise_gate_a1c0e6e6c834663236ceca91522c891a4}{Noise\+Gate}} (int)
+\begin{DoxyCompactList}\small\item\em Construct a new Noise Gate object -\/ parameterized with int. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_noise_gate_a544849a55cf98e169155c302e3f00f94}{Noisegate}} (unsigned char $\ast$, int)
+\begin{DoxyCompactList}\small\item\em Noisegate function for one channel wav file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_noise_gate_ab81702757c800b8a560e10edc079f257}{Noisegate\+Stereo}} (unsigned char $\ast$, unsigned char $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_noise_gate}{Noise\+Gate}} function for stereo wav file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_noise_gate_acab8baa73ab66ee5c377631c2c1f3c72}{process\+Buffer}} (unsigned char $\ast$buffer, int buffer\+Size) override
+\begin{DoxyCompactList}\small\item\em process\+Buffer for one channel wav file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_noise_gate_a9f02642607be3bc9e334adfce1cc996e}{process\+Buffer\+Stereo}} (unsigned char $\ast$buffer1, unsigned char $\ast$buffer2, int buffers1, int buffers2) override
+\begin{DoxyCompactList}\small\item\em process\+Buffer for stereo wav file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_noise_gate}{Noise\+Gate}} class -\/ inherits from \mbox{\hyperlink{class_i_processor}{IProcessor}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_noise_gate_a544849a55cf98e169155c302e3f00f94}\label{class_noise_gate_a544849a55cf98e169155c302e3f00f94}} 
+\index{NoiseGate@{NoiseGate}!Noisegate@{Noisegate}}
+\index{Noisegate@{Noisegate}!NoiseGate@{NoiseGate}}
+\doxysubsubsection{\texorpdfstring{Noisegate()}{Noisegate()}}
+{\footnotesize\ttfamily void Noise\+Gate\+::\+Noisegate (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})}
+
+
+
+Noisegate function for one channel wav file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & char $\ast$ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_noise_gate_ab81702757c800b8a560e10edc079f257}\label{class_noise_gate_ab81702757c800b8a560e10edc079f257}} 
+\index{NoiseGate@{NoiseGate}!NoisegateStereo@{NoisegateStereo}}
+\index{NoisegateStereo@{NoisegateStereo}!NoiseGate@{NoiseGate}}
+\doxysubsubsection{\texorpdfstring{NoisegateStereo()}{NoisegateStereo()}}
+{\footnotesize\ttfamily void Noise\+Gate\+::\+Noisegate\+Stereo (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer1,  }\item[{unsigned char $\ast$}]{buffer2,  }\item[{int}]{buffers1,  }\item[{int}]{buffers2 }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_noise_gate}{Noise\+Gate}} function for stereo wav file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & char $\ast$, unsigned char$\ast$ \\
+\hline
+{\em int,int} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_noise_gate_acab8baa73ab66ee5c377631c2c1f3c72}\label{class_noise_gate_acab8baa73ab66ee5c377631c2c1f3c72}} 
+\index{NoiseGate@{NoiseGate}!processBuffer@{processBuffer}}
+\index{processBuffer@{processBuffer}!NoiseGate@{NoiseGate}}
+\doxysubsubsection{\texorpdfstring{processBuffer()}{processBuffer()}}
+{\footnotesize\ttfamily void Noise\+Gate\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+process\+Buffer for one channel wav file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_processor}{IProcessor}}.
+
+\mbox{\Hypertarget{class_noise_gate_a9f02642607be3bc9e334adfce1cc996e}\label{class_noise_gate_a9f02642607be3bc9e334adfce1cc996e}} 
+\index{NoiseGate@{NoiseGate}!processBufferStereo@{processBufferStereo}}
+\index{processBufferStereo@{processBufferStereo}!NoiseGate@{NoiseGate}}
+\doxysubsubsection{\texorpdfstring{processBufferStereo()}{processBufferStereo()}}
+{\footnotesize\ttfamily void Noise\+Gate\+::process\+Buffer\+Stereo (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer1,  }\item[{unsigned char $\ast$}]{buffer2,  }\item[{int}]{buffers1,  }\item[{int}]{buffers2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+process\+Buffer for stereo wav file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer1} & \\
+\hline
+{\em buffer2} & \\
+\hline
+{\em buffers1} & \\
+\hline
+{\em buffers2} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_processor}{IProcessor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+noisegate.\+h\item 
+noisegate.\+cpp\end{DoxyCompactItemize}

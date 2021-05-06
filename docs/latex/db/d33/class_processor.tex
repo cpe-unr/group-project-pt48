@@ -1,0 +1,77 @@
+\hypertarget{class_processor}{}\doxysection{Processor Class Reference}
+\label{class_processor}\index{Processor@{Processor}}
+
+
+\mbox{\hyperlink{class_processor}{Processor}} class -\/ inherits from \mbox{\hyperlink{class_i_processor}{IProcessor}}.  
+
+
+
+
+{\ttfamily \#include $<$processor.\+h$>$}
+
+Inheritance diagram for Processor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{db/d33/class_processor}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_processor_abdd4a78840105d456aea22feda164798}{process\+Buffer}} (unsigned char $\ast$buffer, int buffer\+Size) override
+\begin{DoxyCompactList}\small\item\em process\+Buffer for one channel wav file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_processor_ae321f1785939c5070559aae4f90119a5}{process\+Buffer\+Stereo}} (unsigned char $\ast$, unsigned char $\ast$, int, int) override
+\begin{DoxyCompactList}\small\item\em process\+Buffer for two channel wav file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_processor}{Processor}} class -\/ inherits from \mbox{\hyperlink{class_i_processor}{IProcessor}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_processor_abdd4a78840105d456aea22feda164798}\label{class_processor_abdd4a78840105d456aea22feda164798}} 
+\index{Processor@{Processor}!processBuffer@{processBuffer}}
+\index{processBuffer@{processBuffer}!Processor@{Processor}}
+\doxysubsubsection{\texorpdfstring{processBuffer()}{processBuffer()}}
+{\footnotesize\ttfamily void Processor\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+process\+Buffer for one channel wav file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_processor}{IProcessor}}.
+
+\mbox{\Hypertarget{class_processor_ae321f1785939c5070559aae4f90119a5}\label{class_processor_ae321f1785939c5070559aae4f90119a5}} 
+\index{Processor@{Processor}!processBufferStereo@{processBufferStereo}}
+\index{processBufferStereo@{processBufferStereo}!Processor@{Processor}}
+\doxysubsubsection{\texorpdfstring{processBufferStereo()}{processBufferStereo()}}
+{\footnotesize\ttfamily void Processor\+::process\+Buffer\+Stereo (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{,  }\item[{unsigned char $\ast$}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+process\+Buffer for two channel wav file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & \\
+\hline
+{\em char} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_processor}{IProcessor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+processor.\+h\end{DoxyCompactItemize}

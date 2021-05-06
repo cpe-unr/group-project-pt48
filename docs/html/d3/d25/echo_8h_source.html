@@ -79,23 +79,33 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include&lt;iostream&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="../../dc/dd7/classEcho.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/dd7/classEcho.html">Echo</a> : <span class="keyword">public</span> <a class="code" href="../../d5/d21/classIProcessor.html">IProcessor</a>{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> delay;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>: </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="../../dc/dd7/classEcho.html">Echo</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="../../dc/dd7/classEcho.html">Echo</a>(<span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">void</span> echo(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">void</span> echoStereo(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">void</span> processBuffer(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* buffer, <span class="keywordtype">int</span> bufferSize) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">void</span> processBufferStereo(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassEcho_html"><div class="ttname"><a href="../../dc/dd7/classEcho.html">Echo</a></div><div class="ttdef"><b>Definition:</b> echo.h:15</div></div>
-<div class="ttc" id="aclassIProcessor_html"><div class="ttname"><a href="../../d5/d21/classIProcessor.html">IProcessor</a></div><div class="ttdef"><b>Definition:</b> iprocessor.h:11</div></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d5/dcc/class_echo.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/dcc/class_echo.html">Echo</a> : <span class="keyword">public</span> <a class="code" href="../../dd/d12/class_i_processor.html">IProcessor</a>{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> delay;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>: </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="../../d5/dcc/class_echo.html#ababd42898feed0775f5234d53fe9bff1">Echo</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="../../d5/dcc/class_echo.html#ababd42898feed0775f5234d53fe9bff1">Echo</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/dcc/class_echo.html#a0b84fd073c9df2be3f26139556df730d">echo</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/dcc/class_echo.html#ab425425374c50041b8bc7868107388e8">echoStereo</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/dcc/class_echo.html#ae915d9d4065a34411d18791a5ae9006b">processBuffer</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* buffer, <span class="keywordtype">int</span> bufferSize) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/dcc/class_echo.html#ab90450d28f4168a656fb7eee356b7780">processBufferStereo</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;};</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_echo_html"><div class="ttname"><a href="../../d5/dcc/class_echo.html">Echo</a></div><div class="ttdoc">Echo class - inherits from IProcessor.</div><div class="ttdef"><b>Definition:</b> echo.h:19</div></div>
+<div class="ttc" id="aclass_echo_html_a0b84fd073c9df2be3f26139556df730d"><div class="ttname"><a href="../../d5/dcc/class_echo.html#a0b84fd073c9df2be3f26139556df730d">Echo::echo</a></div><div class="ttdeci">void echo(unsigned char *, int)</div><div class="ttdoc">echo function for one channel wav file</div><div class="ttdef"><b>Definition:</b> echo.cpp:21</div></div>
+<div class="ttc" id="aclass_echo_html_ab425425374c50041b8bc7868107388e8"><div class="ttname"><a href="../../d5/dcc/class_echo.html#ab425425374c50041b8bc7868107388e8">Echo::echoStereo</a></div><div class="ttdeci">void echoStereo(unsigned char *, unsigned char *, int, int)</div><div class="ttdoc">echo function for stereo wav file</div><div class="ttdef"><b>Definition:</b> echo.cpp:27</div></div>
+<div class="ttc" id="aclass_echo_html_ab90450d28f4168a656fb7eee356b7780"><div class="ttname"><a href="../../d5/dcc/class_echo.html#ab90450d28f4168a656fb7eee356b7780">Echo::processBufferStereo</a></div><div class="ttdeci">void processBufferStereo(unsigned char *, unsigned char *, int, int) override</div><div class="ttdoc">processBuffer for stereo wav file</div><div class="ttdef"><b>Definition:</b> echo.cpp:17</div></div>
+<div class="ttc" id="aclass_echo_html_ababd42898feed0775f5234d53fe9bff1"><div class="ttname"><a href="../../d5/dcc/class_echo.html#ababd42898feed0775f5234d53fe9bff1">Echo::Echo</a></div><div class="ttdeci">Echo()</div><div class="ttdoc">Construct a new Echo object.</div><div class="ttdef"><b>Definition:</b> echo.cpp:7</div></div>
+<div class="ttc" id="aclass_echo_html_ae915d9d4065a34411d18791a5ae9006b"><div class="ttname"><a href="../../d5/dcc/class_echo.html#ae915d9d4065a34411d18791a5ae9006b">Echo::processBuffer</a></div><div class="ttdeci">void processBuffer(unsigned char *buffer, int bufferSize) override</div><div class="ttdoc">processBuffer for one channel wav file</div><div class="ttdef"><b>Definition:</b> echo.cpp:13</div></div>
+<div class="ttc" id="aclass_i_processor_html"><div class="ttname"><a href="../../dd/d12/class_i_processor.html">IProcessor</a></div><div class="ttdef"><b>Definition:</b> iprocessor.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,0 +1,120 @@
+\hypertarget{class_echo}{}\doxysection{Echo Class Reference}
+\label{class_echo}\index{Echo@{Echo}}
+
+
+\mbox{\hyperlink{class_echo}{Echo}} class -\/ inherits from \mbox{\hyperlink{class_i_processor}{IProcessor}}.  
+
+
+
+
+{\ttfamily \#include $<$echo.\+h$>$}
+
+Inheritance diagram for Echo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d5/dcc/class_echo}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_echo_ababd42898feed0775f5234d53fe9bff1}\label{class_echo_ababd42898feed0775f5234d53fe9bff1}} 
+\mbox{\hyperlink{class_echo_ababd42898feed0775f5234d53fe9bff1}{Echo}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_echo}{Echo}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_echo_a4e3df9892aee4d5018da4eadcf634ccb}\label{class_echo_a4e3df9892aee4d5018da4eadcf634ccb}} 
+\mbox{\hyperlink{class_echo_a4e3df9892aee4d5018da4eadcf634ccb}{Echo}} (int)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_echo}{Echo}} object -\/ parameterized with int. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_echo_a0b84fd073c9df2be3f26139556df730d}{echo}} (unsigned char $\ast$, int)
+\begin{DoxyCompactList}\small\item\em echo function for one channel wav file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_echo_ab425425374c50041b8bc7868107388e8}{echo\+Stereo}} (unsigned char $\ast$, unsigned char $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em echo function for stereo wav file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_echo_ae915d9d4065a34411d18791a5ae9006b}{process\+Buffer}} (unsigned char $\ast$buffer, int buffer\+Size) override
+\begin{DoxyCompactList}\small\item\em process\+Buffer for one channel wav file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_echo_ab90450d28f4168a656fb7eee356b7780}{process\+Buffer\+Stereo}} (unsigned char $\ast$, unsigned char $\ast$, int, int) override
+\begin{DoxyCompactList}\small\item\em process\+Buffer for stereo wav file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_echo}{Echo}} class -\/ inherits from \mbox{\hyperlink{class_i_processor}{IProcessor}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_echo_a0b84fd073c9df2be3f26139556df730d}\label{class_echo_a0b84fd073c9df2be3f26139556df730d}} 
+\index{Echo@{Echo}!echo@{echo}}
+\index{echo@{echo}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{echo()}{echo()}}
+{\footnotesize\ttfamily void Echo\+::echo (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})}
+
+
+
+echo function for one channel wav file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & char $\ast$, int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_echo_ab425425374c50041b8bc7868107388e8}\label{class_echo_ab425425374c50041b8bc7868107388e8}} 
+\index{Echo@{Echo}!echoStereo@{echoStereo}}
+\index{echoStereo@{echoStereo}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{echoStereo()}{echoStereo()}}
+{\footnotesize\ttfamily void Echo\+::echo\+Stereo (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer1,  }\item[{unsigned char $\ast$}]{buffer2,  }\item[{int}]{buffers1,  }\item[{int}]{buffers2 }\end{DoxyParamCaption})}
+
+
+
+echo function for stereo wav file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & char $\ast$, unsigned char$\ast$ \\
+\hline
+{\em int,int} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_echo_ae915d9d4065a34411d18791a5ae9006b}\label{class_echo_ae915d9d4065a34411d18791a5ae9006b}} 
+\index{Echo@{Echo}!processBuffer@{processBuffer}}
+\index{processBuffer@{processBuffer}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{processBuffer()}{processBuffer()}}
+{\footnotesize\ttfamily void Echo\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+process\+Buffer for one channel wav file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_processor}{IProcessor}}.
+
+\mbox{\Hypertarget{class_echo_ab90450d28f4168a656fb7eee356b7780}\label{class_echo_ab90450d28f4168a656fb7eee356b7780}} 
+\index{Echo@{Echo}!processBufferStereo@{processBufferStereo}}
+\index{processBufferStereo@{processBufferStereo}!Echo@{Echo}}
+\doxysubsubsection{\texorpdfstring{processBufferStereo()}{processBufferStereo()}}
+{\footnotesize\ttfamily void Echo\+::process\+Buffer\+Stereo (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer1,  }\item[{unsigned char $\ast$}]{buffer2,  }\item[{int}]{buffers1,  }\item[{int}]{buffers2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+process\+Buffer for stereo wav file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & \\
+\hline
+{\em char} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_processor}{IProcessor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+echo.\+h\item 
+echo.\+cpp\end{DoxyCompactItemize}

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['meta_5fdata_20',['meta_data',['../d1/dd1/structmeta__data.html',1,'']]],
-  ['metamanager_21',['MetaManager',['../df/dc7/classMetaManager.html',1,'']]]
+  ['noisegate_46',['NoiseGate',['../d9/d07/class_noise_gate.html',1,'']]],
+  ['normalize_47',['Normalize',['../d4/d46/class_normalize.html',1,'']]]
 ];

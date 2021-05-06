@@ -1,0 +1,124 @@
+\hypertarget{class_normalize}{}\doxysection{Normalize Class Reference}
+\label{class_normalize}\index{Normalize@{Normalize}}
+
+
+\mbox{\hyperlink{class_normalize}{Normalize}} \mbox{\hyperlink{class_wav}{Wav}} class -\/ inherits from \mbox{\hyperlink{class_i_processor}{IProcessor}}.  
+
+
+
+
+{\ttfamily \#include $<$normalization.\+h$>$}
+
+Inheritance diagram for Normalize\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d4/d46/class_normalize}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_normalize_a4e02803bd3999792686b756d8a486a6a}\label{class_normalize_a4e02803bd3999792686b756d8a486a6a}} 
+\mbox{\hyperlink{class_normalize_a4e02803bd3999792686b756d8a486a6a}{Normalize}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_normalize}{Normalize}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_normalize_aef47dd65dfd99cda19c80db110169076}\label{class_normalize_aef47dd65dfd99cda19c80db110169076}} 
+\mbox{\hyperlink{class_normalize_aef47dd65dfd99cda19c80db110169076}{Normalize}} (int)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_normalize}{Normalize}} object parameterized with int. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_normalize_a98e8c00ad3390763cd3b9ebf33a60ed7}{Norm\+Wav}} (unsigned char $\ast$, int)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_normalize}{Normalize}} a wav with one channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_normalize_a5f18542cf7cabc81cca09316848367b9}{Norm\+Wav\+Stereo}} (unsigned char $\ast$, unsigned char $\ast$, int, int)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_normalize}{Normalize}} a wav with two channels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_normalize_a27f10652b085c79313f2bab1c855fcf4}{process\+Buffer}} (unsigned char $\ast$buffer, int buffer\+Size) override
+\begin{DoxyCompactList}\small\item\em process buffer with one wav channel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_normalize_adf5670dfe180c7fbfd4452d12c26f468}{process\+Buffer\+Stereo}} (unsigned char $\ast$buffer1, unsigned char $\ast$buffer2, int buffers1, int buffers2) override
+\begin{DoxyCompactList}\small\item\em process buffer with two wav channels \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_normalize}{Normalize}} \mbox{\hyperlink{class_wav}{Wav}} class -\/ inherits from \mbox{\hyperlink{class_i_processor}{IProcessor}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_normalize_a98e8c00ad3390763cd3b9ebf33a60ed7}\label{class_normalize_a98e8c00ad3390763cd3b9ebf33a60ed7}} 
+\index{Normalize@{Normalize}!NormWav@{NormWav}}
+\index{NormWav@{NormWav}!Normalize@{Normalize}}
+\doxysubsubsection{\texorpdfstring{NormWav()}{NormWav()}}
+{\footnotesize\ttfamily void Normalize\+::\+Norm\+Wav (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffersize }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_normalize}{Normalize}} a wav with one channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & char $\ast$, int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_normalize_a5f18542cf7cabc81cca09316848367b9}\label{class_normalize_a5f18542cf7cabc81cca09316848367b9}} 
+\index{Normalize@{Normalize}!NormWavStereo@{NormWavStereo}}
+\index{NormWavStereo@{NormWavStereo}!Normalize@{Normalize}}
+\doxysubsubsection{\texorpdfstring{NormWavStereo()}{NormWavStereo()}}
+{\footnotesize\ttfamily void Normalize\+::\+Norm\+Wav\+Stereo (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer1,  }\item[{unsigned char $\ast$}]{buffer2,  }\item[{int}]{buffers1,  }\item[{int}]{buffers2 }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_normalize}{Normalize}} a wav with two channels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & char $\ast$, unsigned char$\ast$ \\
+\hline
+{\em int,int} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_normalize_a27f10652b085c79313f2bab1c855fcf4}\label{class_normalize_a27f10652b085c79313f2bab1c855fcf4}} 
+\index{Normalize@{Normalize}!processBuffer@{processBuffer}}
+\index{processBuffer@{processBuffer}!Normalize@{Normalize}}
+\doxysubsubsection{\texorpdfstring{processBuffer()}{processBuffer()}}
+{\footnotesize\ttfamily void Normalize\+::process\+Buffer (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer,  }\item[{int}]{buffer\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+process buffer with one wav channel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & \\
+\hline
+{\em buffer\+Size} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_processor}{IProcessor}}.
+
+\mbox{\Hypertarget{class_normalize_adf5670dfe180c7fbfd4452d12c26f468}\label{class_normalize_adf5670dfe180c7fbfd4452d12c26f468}} 
+\index{Normalize@{Normalize}!processBufferStereo@{processBufferStereo}}
+\index{processBufferStereo@{processBufferStereo}!Normalize@{Normalize}}
+\doxysubsubsection{\texorpdfstring{processBufferStereo()}{processBufferStereo()}}
+{\footnotesize\ttfamily void Normalize\+::process\+Buffer\+Stereo (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer1,  }\item[{unsigned char $\ast$}]{buffer2,  }\item[{int}]{buffers1,  }\item[{int}]{buffers2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+process buffer with two wav channels 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer1} & \\
+\hline
+{\em buffer2} & \\
+\hline
+{\em buffers1} & \\
+\hline
+{\em buffers2} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_processor}{IProcessor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+normalization.\+h\item 
+normalization.\+cpp\end{DoxyCompactItemize}
